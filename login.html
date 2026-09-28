@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Staff Login — Turnly</title>
+  <meta name="description" content="Restaurant staff portal for Turnly queue management.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Site Header & Navigation -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <div class="nav-brand">
+          <a href="index.html" class="nav-logo" aria-label="Turnly Home">TURNLY</a>
+        </div>
+
+        <div class="nav-menu">
+          <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="index.html#how-it-works" class="nav-link">How It Works</a></li>
+            <li><a href="index.html#popular-restaurants" class="nav-link">Restaurants</a></li>
+            <li><a href="index.html#about" class="nav-link">About</a></li>
+          </ul>
+        </div>
+
+        <div class="nav-actions">
+          <a href="queue.html" class="btn btn-primary">Join Queue &rarr;</a>
+        </div>
+
+        <button type="button" class="nav-hamburger" aria-label="Toggle navigation menu">
+          <span aria-hidden="true">&#9776;</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="container section-sm">
+
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol class="breadcrumb-list">
+        <li class="breadcrumb-item">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-separator" aria-hidden="true">&gt;</span>
+        </li>
+        <li class="breadcrumb-item">
+          <span class="breadcrumb-current" aria-current="page">Staff Login</span>
+        </li>
+      </ol>
+    </nav>
+
+    <!-- Main Workspace Section: Login Form & Staff Features Aside -->
+    <section class="auth-section section-sm" aria-labelledby="login-heading">
+      <div class="grid grid-2col-balanced gap-xl items-start">
+        
+        <!-- Left Column: Staff Login Form Card -->
+        <div class="card stack stack-lg">
+          <header class="stack stack-xs">
+            <div class="flex items-center gap-xs">
+              <span class="status-badge status-waiting" aria-hidden="true">&#128104;&#8205;&#127859;</span>
+              <h1 id="login-heading">STAFF LOGIN</h1>
+            </div>
+            <p>Log in to manage restaurant queues.</p>
+          </header>
+
+          <form action="admin.html" method="get" class="stack stack-md">
+            
+            <!-- Email Input -->
+            <div class="form-group">
+              <label for="email" class="form-label">
+                <span aria-hidden="true">&#9993;</span>
+                <span>Email</span>
+              </label>
+              <div class="input-wrapper">
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  class="form-input" 
+                  placeholder="e.g. staff@pixelresto.com" 
+                  required 
+                  autocomplete="email"
+                >
+              </div>
+            </div>
+
+            <!-- Password Input -->
+            <div class="form-group">
+              <label for="password" class="form-label">
+                <span aria-hidden="true">&#128274;</span>
+                <span>Password</span>
+              </label>
+              <div class="input-wrapper">
+                <input 
+                  type="password" 
+                  id="password" 
+                  name="password" 
+                  class="form-input" 
+                  placeholder="Enter your password" 
+                  required 
+                  autocomplete="current-password"
+                >
+              </div>
+            </div>
+
+            <!-- Options: Remember Me & Forgot Password -->
+            <div class="flex items-center justify-between flex-wrap gap-sm">
+              <label for="remember-me" class="checkbox-label">
+                <input type="checkbox" id="remember-me" name="remember-me">
+                <span>Remember me</span>
+              </label>
+              <a href="#" class="form-helper">Forgot password?</a>
+            </div>
+
+            <!-- Primary Login Submit Button -->
+            <button type="submit" class="btn btn-primary btn-block">Log In &rarr;</button>
+
+            <!-- Registration Divider Prompt & Secondary Button -->
+            <div class="stack stack-xs text-center">
+              <p class="form-helper">Don't have a staff account yet?</p>
+              <a href="register.html" class="btn btn-secondary btn-block">Create Staff Account &rarr;</a>
+            </div>
+
+          </form>
+        </div>
+
+        <!-- Right Column: Kitchen Counter Scene & Staff Highlights Aside -->
+        <aside class="stack stack-lg order-mobile-first" aria-label="Staff Highlights and Scene">
+          
+          <!-- Scene Placeholder -->
+          <div class="card card-tint text-center stack stack-sm" role="img" aria-label="Restaurant counter scene with staff cat wearing apron holding clipboard and checklist">
+            <div class="text-retro text-accent-orange">&#127988; PIXEL RESTO STAFF</div>
+            <div class="card card-callout">
+              <p class="text-retro text-accent-yellow">
+                &#10004; MANAGE QUEUE<br>
+                &#10004; CALL NEXT<br>
+                &#10004; COMPLETE &amp; SERVE
+              </p>
+            </div>
+            <p class="text-muted">&#128049; Staff Mascot: &ldquo;Keep service running smoothly!&rdquo;</p>
+          </div>
+
+          <!-- Staff Feature Highlights Card -->
+          <div class="card stack stack-md">
+            <h2>FOR RESTAURANT STAFF</h2>
+            
+            <ul class="stack stack-md">
+              <li class="flex items-start gap-md">
+                <div class="kpi-icon" aria-hidden="true">&#128101;</div>
+                <div class="stack stack-xs">
+                  <h3>Manage Queue</h3>
+                  <p>Call, skip, and complete customers with ease.</p>
+                </div>
+              </li>
+
+              <li class="flex items-start gap-md">
+                <div class="kpi-icon" aria-hidden="true">&#128200;</div>
+                <div class="stack stack-xs">
+                  <h3>Real-time Updates</h3>
+                  <p>See live queue status and customer numbers instantly.</p>
+                </div>
+              </li>
+
+              <li class="flex items-start gap-md">
+                <div class="kpi-icon" aria-hidden="true">&#11088;</div>
+                <div class="stack stack-xs">
+                  <h3>Better Service</h3>
+                  <p>Keep your dining room flowing and reduce walkouts.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </aside>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer section-sm">
+    <div class="container stack stack-lg">
+      <div class="flex items-center justify-between flex-wrap gap-md">
+        <div class="stack stack-xs">
+          <a href="index.html" class="nav-logo">TURNLY</a>
+          <p class="text-muted">Your turn, without the wait.</p>
+        </div>
+
+        <nav aria-label="Footer Navigation">
+          <ul class="flex flex-wrap gap-lg">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#how-it-works">How It Works</a></li>
+            <li><a href="index.html#popular-restaurants">Restaurants</a></li>
+            <li><a href="login.html" aria-current="page">Staff Login</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="flex items-center justify-between flex-wrap gap-sm">
+        <small class="text-muted">&copy; 2024 Turnly. All rights reserved.</small>
+        <div class="flex gap-md">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+          <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok">TikTok</a>
+          <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X Twitter">X</a>
+          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">YouTube</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Staff Dashboard — Turnly</title>
+  <meta name="description" content="Turnly staff dashboard to manage restaurant queues in real time.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Dashboard App Shell -->
+  <div class="dashboard-layout">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" aria-label="Staff Navigation">
+      <div class="sidebar-nav">
+        
+        <!-- Brand & Restaurant Header -->
+        <div class="stack stack-md">
+          <a href="index.html" class="nav-logo" aria-label="Turnly Home">TURNLY</a>
+          
+          <div class="card card-callout stack stack-xs">
+            <span class="text-retro text-accent-orange form-label">&#127988; Pixel Resto</span>
+            <small class="text-muted">Japanese Cuisine</small>
+          </div>
+        </div>
+
+        <!-- Navigation Links -->
+        <nav aria-label="Sidebar Menu">
+          <ul class="sidebar-nav">
+            <li>
+              <a href="admin.html" class="sidebar-link is-active" aria-current="page">
+                <span aria-hidden="true">&#127968;</span>
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="#current-queue" class="sidebar-link">
+                <span aria-hidden="true">&#128101;</span>
+                <span>Queue</span>
+              </a>
+            </li>
+            <li>
+              <a href="#history" class="sidebar-link">
+                <span aria-hidden="true">&#9200;</span>
+                <span>History</span>
+              </a>
+            </li>
+            <li>
+              <a href="#restaurant" class="sidebar-link">
+                <span aria-hidden="true">&#127988;</span>
+                <span>Restaurant</span>
+              </a>
+            </li>
+            <li>
+              <a href="#settings" class="sidebar-link">
+                <span aria-hidden="true">&#9881;</span>
+                <span>Settings</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Staff Profile & Logout Section -->
+      <div class="stack stack-sm">
+        <div class="card card-tint flex items-center gap-sm">
+          <div class="kpi-icon" aria-hidden="true">&#128049;</div>
+          <div class="stack stack-xs">
+            <span class="form-label">Raka Pratama</span>
+            <small class="text-muted">Floor Staff</small>
+          </div>
+        </div>
+
+        <a href="login.html" class="btn btn-secondary btn-small btn-block">
+          <span aria-hidden="true">&#8618;</span>
+          <span>Logout</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Workspace Area -->
+    <main class="container section-sm stack stack-xl">
+      
+      <!-- Top Bar Header -->
+      <header class="flex items-center justify-between flex-wrap gap-md">
+        <div class="stack stack-xs">
+          <h1>Staff Dashboard</h1>
+          <p>Manage the queue, call customers, and keep service running smoothly.</p>
+        </div>
+
+        <div class="flex items-center gap-md">
+          <span class="status-badge status-waiting">&#128276; 3 Alerts</span>
+          <span class="text-muted form-label">&#128197; Mon, 26 Nov 2024 &bull; 12:34 PM</span>
+        </div>
+      </header>
+
+      <!-- Welcome Banner -->
+      <section class="card card-callout flex items-center justify-between flex-wrap gap-lg" aria-labelledby="welcome-heading">
+        <div class="stack stack-xs">
+          <h2 id="welcome-heading">
+            WELCOME BACK, <span class="text-accent-orange">RAKA!</span>
+          </h2>
+          <p>Pixel Resto is ready to serve. Let's keep the queue running smoothly!</p>
+        </div>
+
+        <div class="card card-tint text-center stack stack-xs" role="img" aria-label="Staff mascot behind counter with Good Food Brighter Days sign">
+          <p class="text-retro text-accent-yellow">GOOD FOOD BRIGHTER DAYS</p>
+          <small class="text-muted">&#128049; Service Counter Active</small>
+        </div>
+      </section>
+
+      <!-- KPI Summary Section -->
+      <section class="kpi-section" aria-labelledby="kpi-heading">
+        <h2 id="kpi-heading" class="visually-hidden">Queue Key Performance Indicators</h2>
+        
+        <div class="grid grid-cols-4 kpi-grid gap-md">
+          
+          <div class="kpi-card">
+            <div class="kpi-icon" aria-hidden="true">&#128101;</div>
+            <div class="stack stack-xs">
+              <span class="kpi-value">7</span>
+              <span class="kpi-label">Waiting Customers</span>
+            </div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-icon" aria-hidden="true">&#9203;</div>
+            <div class="stack stack-xs">
+              <span class="kpi-value">2</span>
+              <span class="kpi-label">Currently Serving</span>
+            </div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-icon" aria-hidden="true">&#10004;</div>
+            <div class="stack stack-xs">
+              <span class="kpi-value">24</span>
+              <span class="kpi-label">Completed Today</span>
+            </div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-icon" aria-hidden="true">&#9200;</div>
+            <div class="stack stack-xs">
+              <span class="kpi-value">~ 15m</span>
+              <span class="kpi-label">Average Wait Time</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Main Operational Queue Workspace -->
+      <div class="grid-dashboard items-start">
+        
+        <!-- Left: Current Live Queue Table -->
+        <section id="current-queue" class="card stack stack-md" aria-labelledby="queue-table-heading">
+          <header class="flex items-center justify-between flex-wrap gap-md">
+            <div>
+              <h2 id="queue-table-heading">Current Queue</h2>
+              <p class="form-helper">Live queue for Pixel Resto</p>
+            </div>
+
+            <!-- Search and Filter -->
+            <div class="flex items-center gap-sm">
+              <input 
+                type="search" 
+                class="form-input" 
+                placeholder="Search name or number..." 
+                aria-label="Search current queue"
+              >
+              <select class="form-select" aria-label="Filter queue by status">
+                <option value="all">All Status</option>
+                <option value="waiting">Waiting</option>
+                <option value="serving">Serving</option>
+              </select>
+            </div>
+          </header>
+
+          <!-- Table Responsive Container -->
+          <div class="table-container">
+            <table class="data-table">
+              <caption class="visually-hidden">Live Customer Queue Table</caption>
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Queue Number</th>
+                  <th scope="col">Customer Name</th>
+                  <th scope="col">Party Size</th>
+                  <th scope="col">Wait Time</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td><strong class="text-retro">A-12</strong></td>
+                  <td>Maya Putri</td>
+                  <td>4</td>
+                  <td>~ 5 min</td>
+                  <td><span class="status-badge status-serving">Serving</span></td>
+                  <td>
+                    <button type="button" class="btn btn-secondary btn-small">Complete</button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>2</td>
+                  <td><strong class="text-retro">A-13</strong></td>
+                  <td>Dika Rahman</td>
+                  <td>2</td>
+                  <td>~ 10 min</td>
+                  <td><span class="status-badge status-waiting">Waiting</span></td>
+                  <td>
+                    <button type="button" class="btn btn-primary btn-small">Call Next</button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>3</td>
+                  <td><strong class="text-retro">A-14</strong></td>
+                  <td>Sinta Ayu</td>
+                  <td>3</td>
+                  <td>~ 15 min</td>
+                  <td><span class="status-badge status-waiting">Waiting</span></td>
+                  <td>
+                    <button type="button" class="btn btn-secondary btn-small">Call</button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>4</td>
+                  <td><strong class="text-retro">A-15</strong></td>
+                  <td>Raka Helmi</td>
+                  <td>2</td>
+                  <td>~ 20 min</td>
+                  <td><span class="status-badge status-waiting">Waiting</span></td>
+                  <td>
+                    <button type="button" class="btn btn-secondary btn-small">Call</button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>5</td>
+                  <td><strong class="text-retro">A-16</strong></td>
+                  <td>Nabila</td>
+                  <td>5</td>
+                  <td>~ 25 min</td>
+                  <td><span class="status-badge status-waiting">Waiting</span></td>
+                  <td>
+                    <button type="button" class="btn btn-secondary btn-small">Call</button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>6</td>
+                  <td><strong class="text-retro">A-17</strong></td>
+                  <td>Andi Saputra</td>
+                  <td>2</td>
+                  <td>~ 30 min</td>
+                  <td><span class="status-badge status-waiting">Waiting</span></td>
+                  <td>
+                    <button type="button" class="btn btn-secondary btn-small">Call</button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>7</td>
+                  <td><strong class="text-retro">A-18</strong></td>
+                  <td>Putri Ananda</td>
+                  <td>4</td>
+                  <td>~ 35 min</td>
+                  <td><span class="status-badge status-waiting">Waiting</span></td>
+                  <td>
+                    <button type="button" class="btn btn-secondary btn-small">Call</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- Right: Next in Queue Card & Queue Controls -->
+        <aside class="stack stack-lg" aria-label="Next Customer Call Actions">
+          
+          <div class="card queue-action-box stack stack-md">
+            <h2>Next in Queue</h2>
+            
+            <div class="card card-callout stack stack-sm text-center">
+              <span class="form-label justify-center">TICKET READY</span>
+              <div class="kpi-value text-retro text-accent-orange">A-13</div>
+              <p class="lead"><strong>Dika Rahman</strong></p>
+              <p class="text-muted">&#128101; 2 People &bull; Est. wait: ~ 10 min</p>
+            </div>
+
+            <!-- Primary Call Action -->
+            <button type="button" class="btn btn-primary btn-block">
+              <span aria-hidden="true">&#128227;</span>
+              <span>Call Next</span>
+            </button>
+
+            <!-- Secondary Actions -->
+            <div class="grid grid-cols-2 gap-sm">
+              <button type="button" class="btn btn-secondary btn-small">
+                <span aria-hidden="true">&#9197;</span>
+                <span>Skip</span>
+              </button>
+              <button type="button" class="btn btn-secondary btn-small">
+                <span aria-hidden="true">&#10004;</span>
+                <span>Complete</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Quick Actions Panel -->
+          <div class="card stack stack-sm">
+            <h3>Quick Actions</h3>
+            <div class="grid grid-cols-2 gap-sm">
+              <button type="button" class="btn btn-secondary btn-small">&#10133; Walk-in</button>
+              <button type="button" class="btn btn-secondary btn-small">&#128260; Reset</button>
+              <button type="button" class="btn btn-secondary btn-small">&#128196; History</button>
+              <button type="button" class="btn btn-secondary btn-small">&#9881; Settings</button>
+            </div>
+          </div>
+
+        </aside>
+
+      </div>
+
+      <!-- Today's Summary Section -->
+      <section class="card card-callout" aria-labelledby="summary-heading">
+        <div class="stack stack-md">
+          <h2 id="summary-heading">Today's Summary</h2>
+          <div class="grid grid-cols-4 summary-grid gap-md">
+            <div>
+              <span class="text-muted form-label">TOTAL SERVED</span>
+              <p class="kpi-value">24</p>
+            </div>
+            <div>
+              <span class="text-muted form-label">NO SHOW</span>
+              <p class="kpi-value text-accent-orange">2</p>
+            </div>
+            <div>
+              <span class="text-muted form-label">CURRENT WAITING</span>
+              <p class="kpi-value">7</p>
+            </div>
+            <div>
+              <span class="text-muted form-label">PEAK HOURS</span>
+              <p class="lead"><strong>12:00 &ndash; 14:00</strong></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Mobile Bottom App Bar -->
+    <nav class="bottom-nav" aria-label="Mobile Navigation Bar">
+      <a href="admin.html" class="bottom-nav-item is-active" aria-current="page">
+        <span aria-hidden="true">&#127968;</span>
+        <span>Dashboard</span>
+      </a>
+      <a href="#current-queue" class="bottom-nav-item">
+        <span aria-hidden="true">&#128101;</span>
+        <span>Queue</span>
+      </a>
+      <a href="#history" class="bottom-nav-item">
+        <span aria-hidden="true">&#9200;</span>
+        <span>History</span>
+      </a>
+      <a href="#settings" class="bottom-nav-item">
+        <span aria-hidden="true">&#9881;</span>
+        <span>Settings</span>
+      </a>
+    </nav>
+
+  </div>
+
+</body>
+</html>

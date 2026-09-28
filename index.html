@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Turnly — Your Turn, Without the Wait</title>
+  <meta name="description" content="Turnly is a virtual queue system for restaurants. Take a queue online, leave the waiting area, and return when your table is ready.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Site Header & Navigation -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <div class="nav-brand">
+          <a href="index.html" class="nav-logo" aria-label="Turnly Home">TURNLY</a>
+        </div>
+
+        <div class="nav-menu">
+          <ul class="nav-links">
+            <li><a href="index.html" class="nav-link is-active" aria-current="page">Home</a></li>
+            <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+            <li><a href="#popular-restaurants" class="nav-link">Restaurants</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+          </ul>
+        </div>
+
+        <div class="nav-actions">
+          <a href="queue.html" class="btn btn-primary">Join Queue &rarr;</a>
+        </div>
+
+        <button type="button" class="nav-hamburger" aria-label="Toggle navigation menu">
+          <span aria-hidden="true">&#9776;</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main>
+
+    <!-- Hero Section -->
+    <section class="hero section" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="grid grid-2col-balanced items-center gap-xl">
+          
+          <!-- Hero Text & Primary CTAs -->
+          <div class="hero-content stack stack-lg">
+            <div class="hero-eyebrow">
+              <span class="status-badge status-dark"><span class="text-accent-orange" aria-hidden="true">&#9670;</span> Virtual Queue for Restaurants</span>
+            </div>
+
+            <h1 id="hero-title">
+              YOUR TURN,<br>
+              <span class="text-accent-orange">WITHOUT</span> THE WAIT.
+            </h1>
+
+            <p class="lead">
+              Join the queue, leave the waiting area, and come back when your table is ready.
+            </p>
+
+            <div class="hero-actions flex flex-wrap gap-md">
+              <a href="queue.html" class="btn btn-primary">Join Queue &rarr;</a>
+              <a href="#how-it-works" class="btn btn-secondary">&#9654; How It Works</a>
+            </div>
+          </div>
+
+          <!-- Hero Illustration Placeholder Area -->
+          <div class="hero-visual">
+            <div class="card card-tint text-center stack stack-md" role="img" aria-label="Pixel Resto storefront illustration with signboard Good Food Brighter Days and cat mascot holding menu">
+              <div class="text-retro text-accent-orange">&#127988; PIXEL RESTO</div>
+              <div class="card card-callout">
+                <p class="text-retro text-accent-yellow">GOOD FOOD<br>BRIGHTER DAYS</p>
+              </div>
+              <p class="text-muted">&#128049; Mascot: &ldquo;Welcome to Pixel Resto! Let's Eat!&rdquo;</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Value Propositions Section -->
+    <section class="value-props section-sm" aria-labelledby="value-props-heading">
+      <div class="container">
+        <h2 id="value-props-heading" class="visually-hidden">Why Choose Turnly</h2>
+        
+        <div class="grid grid-cols-3 gap-lg">
+          
+          <article class="card flex items-start gap-md">
+            <div class="kpi-icon flex-shrink-0" aria-hidden="true">&#9200;</div>
+            <div class="stack stack-xs">
+              <h3>More Free Time</h3>
+              <p>Leave the waiting area and do other things while you wait.</p>
+            </div>
+          </article>
+
+          <article class="card flex items-start gap-md">
+            <div class="kpi-icon flex-shrink-0" aria-hidden="true">&#128241;</div>
+            <div class="stack stack-xs">
+              <h3>Real-time Updates</h3>
+              <p>Get notified when your table is almost ready.</p>
+            </div>
+          </article>
+
+          <article class="card flex items-start gap-md">
+            <div class="kpi-icon flex-shrink-0" aria-hidden="true">&#10084;</div>
+            <div class="stack stack-xs">
+              <h3>A Smoother Experience</h3>
+              <p>Less waiting, less stress, more time for what you love.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works section" aria-labelledby="how-it-works-heading">
+      <div class="container stack stack-xl">
+        <div class="text-center stack stack-xs">
+          <h2 id="how-it-works-heading">HOW IT WORKS</h2>
+          <p>Get your table in just a few simple steps.</p>
+        </div>
+
+        <div class="grid grid-cols-4 gap-lg">
+          
+          <article class="card stack stack-sm">
+            <div class="status-badge status-waiting">Step 1</div>
+            <h3>JOIN</h3>
+            <p>Fill in your name, choose a restaurant, and party size.</p>
+          </article>
+
+          <article class="card stack stack-sm">
+            <div class="status-badge status-waiting">Step 2</div>
+            <h3>LEAVE</h3>
+            <p>You can leave the waiting area while keeping your place in line.</p>
+          </article>
+
+          <article class="card stack stack-sm">
+            <div class="status-badge status-waiting">Step 3</div>
+            <h3>MONITOR</h3>
+            <p>Check your queue number, people ahead, and estimated wait time.</p>
+          </article>
+
+          <article class="card stack stack-sm">
+            <div class="status-badge status-waiting">Step 4</div>
+            <h3>RETURN</h3>
+            <p>Come back when your table is almost ready.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Popular Restaurants Section -->
+    <section id="popular-restaurants" class="popular-restaurants section" aria-labelledby="restaurants-heading">
+      <div class="container stack stack-xl">
+        <div class="flex items-center justify-between flex-wrap gap-md">
+          <div>
+            <h2 id="restaurants-heading">POPULAR RESTAURANTS</h2>
+            <p>Browse places you can queue right now.</p>
+          </div>
+          <a href="queue.html" class="btn btn-secondary btn-small">View All Restaurants &rarr;</a>
+        </div>
+
+        <div class="grid grid-cols-3 gap-lg">
+          
+          <!-- Restaurant 1 -->
+          <article class="card card-interactive stack stack-md">
+            <div class="stack stack-xs">
+              <h3>Pixel Resto</h3>
+              <p class="text-muted">Japanese Cuisine</p>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-muted">&#9200; 10 - 20 min</span>
+              <span class="status-badge status-completed">Open for Queue</span>
+            </div>
+            <a href="queue.html" class="btn btn-secondary btn-block">Join Queue &rarr;</a>
+          </article>
+
+          <!-- Restaurant 2 -->
+          <article class="card card-interactive stack stack-md">
+            <div class="stack stack-xs">
+              <h3>Sunny Bites</h3>
+              <p class="text-muted">Western Cuisine</p>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-muted">&#9200; 15 - 30 min</span>
+              <span class="status-badge status-completed">Open for Queue</span>
+            </div>
+            <a href="queue.html" class="btn btn-secondary btn-block">Join Queue &rarr;</a>
+          </article>
+
+          <!-- Restaurant 3 -->
+          <article class="card card-interactive stack stack-md">
+            <div class="stack stack-xs">
+              <h3>Ramen Ya!</h3>
+              <p class="text-muted">Japanese Cuisine</p>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-muted">&#9200; 20 - 35 min</span>
+              <span class="status-badge status-completed">Open for Queue</span>
+            </div>
+            <a href="queue.html" class="btn btn-secondary btn-block">Join Queue &rarr;</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom Pre-Footer CTA Section -->
+    <section class="cta-banner section-sm" aria-labelledby="cta-heading">
+      <div class="container">
+        <div class="card card-callout flex items-center justify-between flex-wrap gap-lg">
+          <div class="stack stack-xs">
+            <h2 id="cta-heading">READY TO GET YOUR TABLE?</h2>
+            <p>Join the queue now and enjoy a smoother dining experience.</p>
+          </div>
+          <a href="queue.html" class="btn btn-primary">Join Queue &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer id="about" class="site-footer section-sm">
+    <div class="container stack stack-lg">
+      <div class="flex items-center justify-between flex-wrap gap-md">
+        <div class="stack stack-xs">
+          <a href="index.html" class="nav-logo">TURNLY</a>
+          <p class="text-muted">Your turn, without the wait.</p>
+        </div>
+
+        <nav aria-label="Footer Navigation">
+          <ul class="flex flex-wrap gap-lg">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#popular-restaurants">Restaurants</a></li>
+            <li><a href="login.html">Staff Login</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="flex items-center justify-between flex-wrap gap-sm">
+        <small class="text-muted">&copy; 2024 Turnly. All rights reserved.</small>
+        <div class="flex gap-md">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+          <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok">TikTok</a>
+          <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X Twitter">X</a>
+          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">YouTube</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

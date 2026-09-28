@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Queue Status — Turnly</title>
+  <meta name="description" content="Check your live restaurant queue status, estimated wait time, and position in line.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Site Header & Navigation -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <div class="nav-brand">
+          <a href="index.html" class="nav-logo" aria-label="Turnly Home">TURNLY</a>
+        </div>
+
+        <div class="nav-menu">
+          <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="index.html#how-it-works" class="nav-link">How It Works</a></li>
+            <li><a href="index.html#popular-restaurants" class="nav-link">Restaurants</a></li>
+            <li><a href="index.html#about" class="nav-link">About</a></li>
+          </ul>
+        </div>
+
+        <div class="nav-actions">
+          <a href="queue.html" class="btn btn-primary">Join Queue &rarr;</a>
+        </div>
+
+        <button type="button" class="nav-hamburger" aria-label="Toggle navigation menu">
+          <span aria-hidden="true">&#9776;</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="container section-sm">
+
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol class="breadcrumb-list">
+        <li class="breadcrumb-item">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-separator" aria-hidden="true">&gt;</span>
+        </li>
+        <li class="breadcrumb-item">
+          <span class="breadcrumb-current" aria-current="page">Queue Status</span>
+        </li>
+      </ol>
+    </nav>
+
+    <!-- Page Heading -->
+    <header class="stack stack-xs section-sm">
+      <div class="flex items-center gap-xs">
+        <span class="status-badge status-waiting" aria-hidden="true">&#128049;</span>
+        <h1>YOUR QUEUE STATUS</h1>
+      </div>
+      <p>Keep an eye on your queue and return when your table is ready.</p>
+    </header>
+
+    <!-- Ticket & Progress Section -->
+    <section class="queue-status-section" aria-labelledby="ticket-heading">
+      <div class="grid grid-2col-balanced gap-xl items-start">
+        
+        <!-- Left Column: Queue Ticket Card -->
+        <article class="card ticket-card stack stack-lg" aria-labelledby="ticket-heading">
+          <div class="flex items-center justify-between ticket-header-divider">
+            <div class="stack stack-xs">
+              <h2 id="ticket-heading" class="text-retro text-accent-orange">PIXEL RESTO</h2>
+              <p class="text-muted">Japanese Cuisine</p>
+            </div>
+            <span class="status-badge status-waiting">&#9203; WAITING</span>
+          </div>
+
+          <!-- Highlighted Ticket Number Box -->
+          <div class="card card-callout text-center stack stack-xs">
+            <p class="form-label justify-center">YOUR QUEUE NUMBER</p>
+            <div class="kpi-value text-retro text-accent-orange">A-14</div>
+          </div>
+
+          <!-- 4-Quadrant Stats Grid -->
+          <div class="grid grid-cols-2 gap-md">
+            
+            <div class="card card-tint stack stack-xs">
+              <span class="text-muted form-label">&#128101; PARTY SIZE</span>
+              <p class="lead"><strong>2 People</strong></p>
+            </div>
+
+            <div class="card card-tint stack stack-xs">
+              <span class="text-muted form-label">&#128100; PEOPLE AHEAD</span>
+              <p class="lead"><strong>3 People</strong></p>
+            </div>
+
+            <div class="card card-tint stack stack-xs">
+              <span class="text-muted form-label">&#9200; ESTIMATED WAIT</span>
+              <p class="lead"><strong>~ 15 Minutes</strong></p>
+            </div>
+
+            <div class="card card-tint stack stack-xs">
+              <span class="text-muted form-label">&#128269; CURRENT STATUS</span>
+              <p class="lead"><strong>Waiting to be Called</strong></p>
+            </div>
+
+          </div>
+        </article>
+
+        <!-- Right Column: Visual Scene & Queue Progress Timeline -->
+        <aside class="stack stack-lg order-mobile-first" aria-label="Queue Progress and Scene">
+          
+          <!-- Visual Scene Placeholder -->
+          <div class="card card-tint text-center stack stack-sm" role="img" aria-label="Pixel Resto tea drinking scene with mascot cat enjoying tea on a bench">
+            <div class="text-retro text-accent-orange">&#127988; PIXEL RESTO</div>
+            <div class="card card-callout">
+              <p class="text-retro text-accent-yellow">GOOD FOOD<br>BRIGHTER DAYS</p>
+            </div>
+            <p class="text-muted">&#128049; Mascot: &ldquo;Sit back, relax, your table will be ready soon!&rdquo;</p>
+          </div>
+
+          <!-- Queue Progress Card -->
+          <div class="card stack stack-md">
+            <h2>QUEUE PROGRESS</h2>
+            
+            <ol class="stack stack-md">
+              <li class="card card-tint flex items-start gap-md">
+                <span class="status-badge status-waiting" aria-hidden="true">1</span>
+                <div class="stack stack-xs">
+                  <h3>Waiting</h3>
+                  <p>3 people ahead of you</p>
+                </div>
+              </li>
+
+              <li class="card card-tint flex items-start gap-md">
+                <span class="status-badge status-serving" aria-hidden="true">2</span>
+                <div class="stack stack-xs">
+                  <h3>Serving</h3>
+                  <p>Your table is being prepared</p>
+                </div>
+              </li>
+
+              <li class="card card-tint flex items-start gap-md">
+                <span class="status-badge status-completed" aria-hidden="true">3</span>
+                <div class="stack stack-xs">
+                  <h3>Your Turn</h3>
+                  <p>Come back when your number is called</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- Advice Section -->
+    <section class="advice-section section-sm" aria-labelledby="advice-heading">
+      <div class="stack stack-lg">
+        <h2 id="advice-heading" class="visually-hidden">Queue Advice &amp; Tips</h2>
+        
+        <div class="grid grid-cols-3 gap-lg">
+          
+          <article class="card stack stack-sm">
+            <div class="kpi-icon" aria-hidden="true">&#128276;</div>
+            <h3>We'll Call Your Number</h3>
+            <p>Keep this page open or check back anytime. We'll update the status in real time.</p>
+          </article>
+
+          <article class="card stack stack-sm">
+            <div class="kpi-icon" aria-hidden="true">&#128241;</div>
+            <h3>You Can Leave the Area</h3>
+            <p>No need to wait inside. Feel free to explore and come back when your table is ready.</p>
+          </article>
+
+          <article class="card stack stack-sm">
+            <div class="kpi-icon" aria-hidden="true">&#128205;</div>
+            <h3>Real-time Updates</h3>
+            <p>This page updates automatically so you always know your position and estimated wait time.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Restaurant Details Section -->
+    <section class="restaurant-details-section section-sm" aria-labelledby="restaurant-details-heading">
+      <div class="card card-callout flex items-center justify-between flex-wrap gap-lg">
+        <div class="stack stack-xs">
+          <div class="flex items-center gap-sm">
+            <h2 id="restaurant-details-heading">Pixel Resto</h2>
+            <span class="status-badge status-completed">Open for Queue</span>
+          </div>
+          <p>Japanese Cuisine &bull; Casual Dining &bull; Hours: 10:00 AM &ndash; 10:00 PM</p>
+          <p class="text-muted">&#128205; Sunset Boulevard No. 12, Jakarta</p>
+        </div>
+
+        <a href="index.html#popular-restaurants" class="btn btn-secondary">View Restaurant Details &rarr;</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer section-sm">
+    <div class="container stack stack-lg">
+      <div class="flex items-center justify-between flex-wrap gap-md">
+        <div class="stack stack-xs">
+          <a href="index.html" class="nav-logo">TURNLY</a>
+          <p class="text-muted">Your turn, without the wait.</p>
+        </div>
+
+        <nav aria-label="Footer Navigation">
+          <ul class="flex flex-wrap gap-lg">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#how-it-works">How It Works</a></li>
+            <li><a href="index.html#popular-restaurants">Restaurants</a></li>
+            <li><a href="login.html">Staff Login</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="flex items-center justify-between flex-wrap gap-sm">
+        <small class="text-muted">&copy; 2024 Turnly. All rights reserved.</small>
+        <div class="flex gap-md">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+          <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok">TikTok</a>
+          <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X Twitter">X</a>
+          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">YouTube</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

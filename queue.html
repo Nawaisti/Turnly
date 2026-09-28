@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join a Queue — Turnly</title>
+  <meta name="description" content="Join your favorite restaurant queue in seconds with Turnly. No account required.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Site Header & Navigation -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <div class="nav-brand">
+          <a href="index.html" class="nav-logo" aria-label="Turnly Home">TURNLY</a>
+        </div>
+
+        <div class="nav-menu">
+          <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="index.html#how-it-works" class="nav-link">How It Works</a></li>
+            <li><a href="index.html#popular-restaurants" class="nav-link">Restaurants</a></li>
+            <li><a href="index.html#about" class="nav-link">About</a></li>
+          </ul>
+        </div>
+
+        <div class="nav-actions">
+          <a href="queue.html" class="btn btn-primary" aria-current="page">Join Queue &rarr;</a>
+        </div>
+
+        <button type="button" class="nav-hamburger" aria-label="Toggle navigation menu">
+          <span aria-hidden="true">&#9776;</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="container section-sm">
+    
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol class="breadcrumb-list">
+        <li class="breadcrumb-item">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-separator" aria-hidden="true">&gt;</span>
+        </li>
+        <li class="breadcrumb-item">
+          <span class="breadcrumb-current" aria-current="page">Join Queue</span>
+        </li>
+      </ol>
+    </nav>
+
+    <!-- Main Workspace Section: Form & Info Side -->
+    <section class="queue-main-section section-sm" aria-labelledby="join-queue-title">
+      <div class="grid grid-2col-balanced gap-xl items-start">
+        
+        <!-- Left Column: Customer Queue Form & No-Account Callout -->
+        <div class="stack stack-lg">
+          
+          <div class="card stack stack-lg">
+            <header class="stack stack-xs">
+              <div class="flex items-center gap-xs">
+                <span class="status-badge status-waiting" aria-hidden="true">&#128049;</span>
+                <h1 id="join-queue-title">JOIN THE QUEUE</h1>
+              </div>
+              <p>Fill in your details to get a queue number.</p>
+            </header>
+
+            <form action="status.html" method="get" class="stack stack-md">
+              
+              <!-- Customer Name Field -->
+              <div class="form-group">
+                <label for="customer-name" class="form-label">
+                  <span aria-hidden="true">&#128100;</span>
+                  <span>Your Name</span>
+                </label>
+                <div class="input-wrapper">
+                  <input 
+                    type="text" 
+                    id="customer-name" 
+                    name="customer-name" 
+                    class="form-input" 
+                    placeholder="e.g. Alex" 
+                    required 
+                    autocomplete="name"
+                  >
+                </div>
+              </div>
+
+              <!-- Restaurant Selection Field -->
+              <div class="form-group">
+                <label for="restaurant" class="form-label">
+                  <span aria-hidden="true">&#127988;</span>
+                  <span>Choose Restaurant</span>
+                </label>
+                <div class="input-wrapper">
+                  <select id="restaurant" name="restaurant" class="form-select" required>
+                    <option value="pixel-resto" selected>Pixel Resto</option>
+                    <option value="sunny-bites">Sunny Bites</option>
+                    <option value="ramen-ya">Ramen Ya!</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Party Size Selection Field -->
+              <div class="form-group">
+                <label for="party-size" class="form-label">
+                  <span aria-hidden="true">&#128101;</span>
+                  <span>Party Size</span>
+                </label>
+                <div class="input-wrapper">
+                  <select id="party-size" name="party-size" class="form-select" required>
+                    <option value="1">1 Person</option>
+                    <option value="2" selected>2 People</option>
+                    <option value="3">3 People</option>
+                    <option value="4">4 People</option>
+                    <option value="5">5 People</option>
+                    <option value="6+">6+ People</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn-primary btn-block">Get Queue Number &rarr;</button>
+
+            </form>
+          </div>
+
+          <!-- Customer No-Account Callout -->
+          <div class="card card-callout flex items-center gap-md" role="note">
+            <div class="kpi-icon" aria-hidden="true">&#128161;</div>
+            <div class="stack stack-xs">
+              <h2 class="form-label">No account needed!</h2>
+              <p>Just fill in your name and we'll reserve your place in the queue.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Visual Scene & 3-Step Guide Aside -->
+        <aside class="stack stack-lg order-mobile-first" aria-label="Queue Information and Instructions">
+          
+          <!-- Scene Placeholder -->
+          <div class="card card-tint text-center stack stack-sm" role="img" aria-label="Pixel Resto storefront scene with mascot cat holding menu">
+            <div class="text-retro text-accent-orange">&#127988; PIXEL RESTO</div>
+            <div class="card card-callout">
+              <p class="text-retro text-accent-yellow">GOOD FOOD<br>BRIGHTER DAYS</p>
+            </div>
+            <p class="text-muted">&#128049; Mascot waiting outside Pixel Resto</p>
+          </div>
+
+          <!-- 3 Simple Steps Card -->
+          <div class="card stack stack-md">
+            <h2 class="text-center">YOUR QUEUE IN 3 SIMPLE STEPS</h2>
+            
+            <ol class="stack stack-md">
+              <li class="flex items-start gap-md">
+                <span class="status-badge status-waiting" aria-hidden="true">1</span>
+                <div class="stack stack-xs">
+                  <h3>Fill Details</h3>
+                  <p>Enter your name, choose a restaurant, and select party size.</p>
+                </div>
+              </li>
+
+              <li class="flex items-start gap-md">
+                <span class="status-badge status-waiting" aria-hidden="true">2</span>
+                <div class="stack stack-xs">
+                  <h3>Get Number</h3>
+                  <p>Receive your queue number instantly.</p>
+                </div>
+              </li>
+
+              <li class="flex items-start gap-md">
+                <span class="status-badge status-waiting" aria-hidden="true">3</span>
+                <div class="stack stack-xs">
+                  <h3>Wait &amp; Return</h3>
+                  <p>Leave the waiting area and come back when your table is ready.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- Bottom Information Banner -->
+    <section class="more-restaurants-banner section-sm" aria-labelledby="more-restaurants-heading">
+      <div class="card card-callout flex items-center justify-between flex-wrap gap-lg">
+        <div class="stack stack-xs">
+          <h2 id="more-restaurants-heading">EXPLORE MORE RESTAURANTS</h2>
+          <p>Browse other great restaurants available on Turnly.</p>
+        </div>
+        <a href="index.html#popular-restaurants" class="btn btn-secondary">View Restaurants &rarr;</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer section-sm">
+    <div class="container stack stack-lg">
+      <div class="flex items-center justify-between flex-wrap gap-md">
+        <div class="stack stack-xs">
+          <a href="index.html" class="nav-logo">TURNLY</a>
+          <p class="text-muted">Your turn, without the wait.</p>
+        </div>
+
+        <nav aria-label="Footer Navigation">
+          <ul class="flex flex-wrap gap-lg">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#how-it-works">How It Works</a></li>
+            <li><a href="index.html#popular-restaurants">Restaurants</a></li>
+            <li><a href="login.html">Staff Login</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="flex items-center justify-between flex-wrap gap-sm">
+        <small class="text-muted">&copy; 2024 Turnly. All rights reserved.</small>
+        <div class="flex gap-md">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+          <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok">TikTok</a>
+          <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X Twitter">X</a>
+          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">YouTube</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
