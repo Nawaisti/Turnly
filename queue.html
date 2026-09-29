@@ -69,7 +69,7 @@
               <p>Fill in your details to get a queue number.</p>
             </header>
 
-            <form action="status.html" method="get" class="stack stack-md">
+            <form id="queue-form" action="status.html" method="get" class="stack stack-md">
               
               <!-- Customer Name Field -->
               <div class="form-group">
@@ -88,6 +88,8 @@
                     autocomplete="name"
                   >
                 </div>
+                <!-- Step 09: Name validation message -->
+                <p id="error-name" role="alert" aria-live="assertive" hidden></p>
               </div>
 
               <!-- Restaurant Selection Field -->
@@ -103,6 +105,8 @@
                     <option value="ramen-ya">Ramen Ya!</option>
                   </select>
                 </div>
+                <!-- Step 09: Restaurant validation message -->
+                <p id="error-restaurant" role="alert" aria-live="assertive" hidden></p>
               </div>
 
               <!-- Party Size Selection Field -->
@@ -121,10 +125,20 @@
                     <option value="6+">6+ People</option>
                   </select>
                 </div>
+                <!-- Step 09: Party size validation message -->
+                <p id="error-party" role="alert" aria-live="assertive" hidden></p>
               </div>
 
               <!-- Submit Button -->
               <button type="submit" class="btn btn-primary btn-block">Get Queue Number &rarr;</button>
+
+              <!-- Step 08: Form Confirmation Panel (hidden until submit) -->
+              <div id="queue-confirmation" class="card card-callout stack stack-xs" role="status" aria-live="polite" hidden>
+                <p class="form-label">&#10003; Submission received!</p>
+                <p id="confirm-name"></p>
+                <p id="confirm-restaurant"></p>
+                <p id="confirm-party"></p>
+              </div>
 
             </form>
           </div>
@@ -145,7 +159,7 @@
           
           <!-- Scene Placeholder -->
           <div class="card card-tint text-center stack stack-sm" role="img" aria-label="Pixel Resto storefront scene with mascot cat holding menu">
-            <div class="text-retro text-accent-orange">&#127988; PIXEL RESTO</div>
+            <div id="scene-label" class="text-retro text-accent-orange">&#127988; PIXEL RESTO</div>
             <div class="card card-callout">
               <p class="text-retro text-accent-yellow">GOOD FOOD<br>BRIGHTER DAYS</p>
             </div>
@@ -181,6 +195,32 @@
                 </div>
               </li>
             </ol>
+          </div>
+
+          <!-- Step 10: Dynamic Queue Preview (hidden until valid submit) -->
+          <div id="queue-preview" class="card stack stack-md" role="region" aria-label="Queue Preview" aria-live="polite" hidden>
+            <header class="stack stack-xs">
+              <div class="flex items-center gap-xs">
+                <span class="status-badge status-waiting" aria-hidden="true">&#128203;</span>
+                <h2>YOUR QUEUE PREVIEW</h2>
+              </div>
+              <p class="text-muted">Review your details before you go.</p>
+            </header>
+
+            <dl class="stack stack-sm">
+              <div class="flex items-center justify-between gap-md">
+                <dt class="form-label">Customer</dt>
+                <dd id="preview-name" class="text-accent-orange"></dd>
+              </div>
+              <div class="flex items-center justify-between gap-md">
+                <dt class="form-label">Restaurant</dt>
+                <dd id="preview-restaurant"></dd>
+              </div>
+              <div class="flex items-center justify-between gap-md">
+                <dt class="form-label">Party size</dt>
+                <dd id="preview-party"></dd>
+              </div>
+            </dl>
           </div>
 
         </aside>
@@ -232,5 +272,7 @@
     </div>
   </footer>
 
+  <!-- Week 3 / Step 06: DOM Select & Change -->
+  <script src="js/queue-select.js" defer></script>
 </body>
 </html>
